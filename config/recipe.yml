@@ -26,13 +26,15 @@ modules:
       - foot
       - neovim
       - zsh
+      - zsh-autosuggestions
+      - zsh-syntax-highlighting
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
       - htop
-      - konsole
+      - konsole5
       - vim
 
   - type: default-flatpaks
