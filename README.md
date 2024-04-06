@@ -1,8 +1,9 @@
-# BlueBuild Template &nbsp; [![build-ublue](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
+# Fedora Blahaj &nbsp; [![build-ublue](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+This is a custom fedora atomic image. It derives from `uBlue` main images, and currently
+only includes the `kinoite` variant.
 
-After setup, it is recommended you update this README to describe your custom image.
+I will most likely add nvidia support later.
 
 ## Installation
 
