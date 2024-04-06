@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
-name: blahaj
+name: ublahaj
 # description will be included in the image's metadata
-description: Fedora atomic, but it's for shorks, and it's blue. So it's Blahaj.
+description: uBlue based custom image, but it's for shorks, and it's blue. So it's uBlahaj.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
@@ -22,7 +22,9 @@ modules:
     install:
       # - micro
       # - starship
+      - bat
       - btop
+      - eza
       - foot
       - neovim
       - zsh
