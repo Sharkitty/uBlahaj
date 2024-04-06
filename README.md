@@ -1,7 +1,7 @@
-# Fedora Blahaj &nbsp; [![build-ublue](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
+# uBlahaj &nbsp; [![build-ublue](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
 
-This is a custom fedora atomic image. It derives from `uBlue` main images, and currently
-only includes the `kinoite` variant.
+This is a custom fedora atomic image derived from `uBlue` main images.
+It currently only includes the `kinoite` variant.
 
 I will most likely add nvidia support later.
 
