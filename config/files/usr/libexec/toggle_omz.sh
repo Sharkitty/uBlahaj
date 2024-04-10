@@ -54,6 +54,11 @@ install_omz()
 
 uninstall_omz()
 {
+	# Add missing permissions so the script can run
+	# Note: You're supposed to have a command to uninstall omz,
+	# but it doesn't seem to work from scripts, so I just run the script this command calls.
+	chmod u+x $HOME/.oh-my-zsh/tools/uninstall.sh
+
 	if [[ "$1" = false ]]
 	then
 		# Uninstalling non interactively
