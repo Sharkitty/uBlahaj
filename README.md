@@ -5,6 +5,9 @@ It currently only includes the `kinoite` variant.
 
 I will most likely add nvidia support later.
 
+**This is a work in progress. I currently don't recommand using this image for production.**
+**Expect image naming changes soon. You will need to rebase when this happens.**
+
 ## Installation
 
 > **Warning**  
