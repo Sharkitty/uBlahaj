@@ -1,0 +1,80 @@
+title: Welcome to uBlahaj :3
+properties:
+  mode: "run-on-change"
+  path: "~/.config/yafti/last-run"
+screens:
+  first-screen:
+    source: yafti.screen.title
+    values:
+      title: "Welcome to uBlahaj :3"
+      description: |
+        I'm gonnya halp chu set up youw system UwU
+  check-system-flathub:
+    source: yafti.screen.consent
+    values:
+      title: Nyo flathub repo OwO
+      condition:
+        run: flatpak remotes --system --columns=name | grep flathub | wc -l | grep '^0$'
+      description: |
+        Flathub wemote is nyot installed :c Do you want to nyanstall it? :3
+      actions:
+        - run: flatpak remote-add --if-not-exists --system flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  applications:
+    source: yafti.screen.package
+    values:
+      title: Kewl apps to install :3
+      show_terminal: true
+      package_manager: yafti.plugin.flatpak
+      package_manager_defaults:
+        user: false
+        system: true
+      groups:
+        KDE Gear:
+          description: KDE Apps for KDE fans UwU
+          default: true
+          packages:
+            - Gwenview: org.kde.gwenview
+            - Okular: org.kde.okular
+        Intewnet:
+          description: Intewnet stuff for shonks on keyboawd OwO
+          default: true
+          packages:
+            - Librewolf: io.gitlab.librewolf-community
+            - Firefox: org.mozilla.firefox
+            - Fluffychat: im.fluffychat.Fluffychat
+            - Thunderbird: org.mozilla.Thunderbird
+        Multimedia and Office:
+          description: Things to watch animes :3 But also bowing office stuff TwT
+          default: true
+          packages:
+            - LibreOffice: org.libreoffice.LibreOffice
+            - VLC: org.videolan.VLC
+        Gaming:
+          description: FUUUUUUUUUUUUUUN OwO
+          default: true
+          packages:
+            - Heroic Games Launcher: com.heroicgameslauncher.hgl
+            - Steam: com.valvesoftware.Steam
+            - The cwtically acclaimed MMOWPG Final Fantasy XIV (XIVLauncher): dev.goats.xivlauncher
+        Tools:
+          description: The best category UwU
+          default: true
+          packages:
+            - Podman Desktop: io.podman_desktop.PodmanDesktop
+            - Fedowa Media Writew: org.fedoraproject.MediaWriter
+            - Remmina: org.remmina.Remmina
+  final-screen:
+    source: yafti.screen.title
+    values:
+      title: "Congwats! Youw system is nyow a hapi shonk :3"
+      links:
+        - "Install Mowe kewl apps":
+          run: /usr/bin/plasma-discover
+        - "Check out uBlahaj wepositowy":
+          run: /usr/bin/xdg-open https://github.com/Sharkitty/uBlahaj
+        - "Check out Universal Blue (upstweam image)":
+          run: /usr/bin/xdg-open https://universal-blue.org/
+        - "Check out BlueBuild (used to make this image)":
+          run: /usr/bin/xdg-open https://blue-build.org/
+        - "Fedora official website":
+          run: /usr/bin/xdg-open https://fedoraproject.org/
