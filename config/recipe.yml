@@ -32,6 +32,8 @@ modules:
       - htop
       - toolbox
 
+  - type: yafti
+
   - type: fonts
     fonts:
       nerd-fonts:
