@@ -23,9 +23,6 @@ Some packages are added or removed from the base image:
 - Installing `ohmyzsh` (Note: `yafti` won't set your default shell, you can use `ujust chsh` or simply `chsh` for that).
 - Copying user configs from [sharkonfig](https://github.com/Sharkitty/sharkonfig).
 
-The way `yafti` has been setup, user consent is requested at every step.
-Nothing is done without user consent.
-
 Also, `yafti` nyans. You'll get what I mean on first boot :3
 
 ## Installation
