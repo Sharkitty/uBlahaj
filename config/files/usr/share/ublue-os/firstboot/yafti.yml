@@ -1,7 +1,11 @@
 title: Welcome to uBlahaj :3
+
+
 properties:
   mode: "run-on-change"
   path: "~/.config/yafti/last-run"
+
+
 screens:
   first-screen:
     source: yafti.screen.title
@@ -9,6 +13,7 @@ screens:
       title: "Welcome to uBlahaj :3"
       description: |
         I'm gonnya halp chu set up youw system UwU
+
   check-system-flathub:
     source: yafti.screen.consent
     values:
@@ -19,6 +24,7 @@ screens:
         Flathub wemote is nyot installed :c Do you want to nyanstall it? :3
       actions:
         - run: flatpak remote-add --if-not-exists --system flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
   applications:
     source: yafti.screen.package
     values:
@@ -57,16 +63,44 @@ screens:
             - Steam: com.valvesoftware.Steam
             - The cwtically acclaimed MMOWPG Final Fantasy XIV (XIVLauncher): dev.goats.xivlauncher
         Tools:
-          description: The best category UwU
+          description: The best categowy UwU
           default: true
           packages:
             - Podman Desktop: io.podman_desktop.PodmanDesktop
             - Fedowa Media Writew: org.fedoraproject.MediaWriter
             - Remmina: org.remmina.Remmina
+
+  omz-consent:
+    source: yafti.screen.consent
+    values:
+      title: "ohmyzsh nyanstallation"
+      condition:
+        run: |
+          [ -d "$HOME/.oh-my-zsh" ] || echo "ohmyzsh is not installed"
+      descritpion: |
+        "uBlahaj comes with zsh pweinstalled. Do you want to install ohmyzsh like a kewl shark? You can also do that later with `ujust`"
+      actions:
+        - run: /usr/libexec/toggle_omz.sh install -n
+
+  sharkonfig-consent:
+    source: yafti.screen.consent
+    values:
+      title: "sharkonfig nyanstallation"
+      description: |
+        "Do you want to nyanstall sharkonfig user configs? These are a collection of dotfiles made for uBlahaj."
+      links:
+        - "More infos on sharkonfig repository":
+          run: /usr/bin/xdg-open https://github.com/Sharkitty/sharkonfig
+      actions:
+        - run: git clone https://github.com/Sharkitty/sharkonfig.git $HOME/sharkonfig
+        - run: python3 $HOME/sharkonfig/scripts/copy.py
+        - run: rm -rf $HOME/sharkonfig
+
   final-screen:
     source: yafti.screen.title
     values:
-      title: "Congwats! Youw system is nyow a hapi shonk :3"
+      title: "Congwats!"
+      description: "Youw system is nyow a hapi shonk :3"
       links:
         - "Install Mowe kewl apps":
           run: /usr/bin/plasma-discover
