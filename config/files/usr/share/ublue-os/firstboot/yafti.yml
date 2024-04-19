@@ -14,6 +14,32 @@ screens:
       description: |
         I'm gonnya halp chu set up youw system UwU
 
+  omz-consent:
+    source: yafti.screen.consent
+    values:
+      title: "ohmyzsh nyanstallation"
+      condition:
+        run: |
+          [ -d "$HOME/.oh-my-zsh" ] || echo "ohmyzsh is not installed"
+      descritpion: |
+        uBlahaj comes with zsh pweinstalled. Do you want to install ohmyzsh like a kewl shark? You can also do that later with ujust
+      actions:
+        - run: /usr/libexec/toggle_omz.sh install -n
+
+  sharkonfig-consent:
+    source: yafti.screen.consent
+    values:
+      title: "sharkonfig nyanstallation"
+      description: |
+        Do you want to nyanstall sharkonfig user configs? These are a collection of dotfiles made for uBlahaj.
+      links:
+        - "More infos on sharkonfig repository":
+          run: /usr/bin/xdg-open https://github.com/Sharkitty/sharkonfig
+      actions:
+        - run: git clone https://github.com/Sharkitty/sharkonfig.git $HOME/sharkonfig
+        - run: python3 $HOME/sharkonfig/scripts/copy.py
+        - run: rm -rf $HOME/sharkonfig
+
   check-system-flathub:
     source: yafti.screen.consent
     values:
@@ -62,6 +88,7 @@ screens:
             - Heroic Games Launcher: com.heroicgameslauncher.hgl
             - Steam: com.valvesoftware.Steam
             - The cwtically acclaimed MMOWPG Final Fantasy XIV (XIVLauncher): dev.goats.xivlauncher
+            - MangoHud: org.freedesktop.Platform.VulkanLayer.MangoHud
         Tools:
           description: The best categowy UwU
           default: true
@@ -69,32 +96,6 @@ screens:
             - Podman Desktop: io.podman_desktop.PodmanDesktop
             - Fedowa Media Writew: org.fedoraproject.MediaWriter
             - Remmina: org.remmina.Remmina
-
-  omz-consent:
-    source: yafti.screen.consent
-    values:
-      title: "ohmyzsh nyanstallation"
-      condition:
-        run: |
-          [ -d "$HOME/.oh-my-zsh" ] || echo "ohmyzsh is not installed"
-      descritpion: |
-        uBlahaj comes with zsh pweinstalled. Do you want to install ohmyzsh like a kewl shark? You can also do that later with ujust
-      actions:
-        - run: /usr/libexec/toggle_omz.sh install -n
-
-  sharkonfig-consent:
-    source: yafti.screen.consent
-    values:
-      title: "sharkonfig nyanstallation"
-      description: |
-        Do you want to nyanstall sharkonfig user configs? These are a collection of dotfiles made for uBlahaj.
-      links:
-        - "More infos on sharkonfig repository":
-          run: /usr/bin/xdg-open https://github.com/Sharkitty/sharkonfig
-      actions:
-        - run: git clone https://github.com/Sharkitty/sharkonfig.git $HOME/sharkonfig
-        - run: python3 $HOME/sharkonfig/scripts/copy.py
-        - run: rm -rf $HOME/sharkonfig
 
   final-screen:
     source: yafti.screen.title

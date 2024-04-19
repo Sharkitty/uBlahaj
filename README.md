@@ -8,6 +8,26 @@ I will most likely add nvidia support later.
 **This is a work in progress. I currently don't recommand using this image for production.**
 **Expect image naming changes soon. You will need to rebase when this happens.**
 
+## Features
+Some packages are added or removed from the base image:
+- `zsh` installed out of the box, with `zsh-autosuggestions` and `zsh-syntax-highlighting` included.
+- `btop` instead of `htop`.
+- `wezterm` terminal emulator.
+- `foot` terminal emulator as well (Planned for removal, along with `tmux`, once a sufficient config is available for `wezterm` in `sharkonfig`).
+- `firefox` is removed, so it can be replaced with the flatpak version.
+- `toolbox` is removed, in favor of `distrobox`.
+
+`yafti` is used for post installation configs, mainly for flatpak and user configs:
+- Installing flathub.
+- Install recommended flatpaks (You can choose what you want or don't want to install).
+- Installing `ohmyzsh` (Note: `yafti` won't set your default shell, you can use `ujust chsh` or simply `chsh` for that).
+- Copying user configs from [sharkonfig](https://github.com/Sharkitty/sharkonfig).
+
+The way `yafti` has been setup, user consent is requested at every step.
+Nothing is done without user consent.
+
+Also, `yafti` nyans. You'll get what I mean on first boot :3
+
 ## Installation
 
 > **Warning**  
