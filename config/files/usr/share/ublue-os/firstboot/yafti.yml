@@ -78,7 +78,7 @@ screens:
       condition:
         run: |
           [ -d "$HOME/.oh-my-zsh" ] || echo "ohmyzsh is not installed"
-      descritpion: |
+      description: |
         uBlahaj comes with zsh pweinstalled. Do you want to install ohmyzsh like a kewl shark? You can also do that later with ujust
       actions:
         - run: /usr/libexec/toggle_omz.sh install -n
