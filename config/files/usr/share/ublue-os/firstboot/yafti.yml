@@ -78,7 +78,7 @@ screens:
         run: |
           [ -d "$HOME/.oh-my-zsh" ] || echo "ohmyzsh is not installed"
       descritpion: |
-        "uBlahaj comes with zsh pweinstalled. Do you want to install ohmyzsh like a kewl shark? You can also do that later with `ujust`"
+        uBlahaj comes with zsh pweinstalled. Do you want to install ohmyzsh like a kewl shark? You can also do that later with ujust
       actions:
         - run: /usr/libexec/toggle_omz.sh install -n
 
@@ -87,7 +87,7 @@ screens:
     values:
       title: "sharkonfig nyanstallation"
       description: |
-        "Do you want to nyanstall sharkonfig user configs? These are a collection of dotfiles made for uBlahaj."
+        Do you want to nyanstall sharkonfig user configs? These are a collection of dotfiles made for uBlahaj.
       links:
         - "More infos on sharkonfig repository":
           run: /usr/bin/xdg-open https://github.com/Sharkitty/sharkonfig
