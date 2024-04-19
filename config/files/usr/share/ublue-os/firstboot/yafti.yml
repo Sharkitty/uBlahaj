@@ -18,7 +18,6 @@ screens:
     source: yafti.screen.consent
     values:
       title: Nyo flathub repo OwO
-      show_terminal: true
       condition:
         run: flatpak remotes --system --columns=name | grep flathub | wc -l | grep '^0$'
       description: |
@@ -76,7 +75,6 @@ screens:
     source: yafti.screen.consent
     values:
       title: ohmyzsh nyanstallation
-      show_terminal: true
       condition:
         run: |
           [ -d "$HOME/.oh-my-zsh" ] || echo "ohmyzsh is not installed"
@@ -89,7 +87,6 @@ screens:
     source: yafti.screen.consent
     values:
       title: sharkonfig nyanstallation
-      show_terminal: true
       description: |
         Do you want to nyanstall sharkonfig user configs? These are a collection of dotfiles made for uBlahaj.
       actions:
@@ -101,7 +98,7 @@ screens:
       title: Congwats!
       description: Youw system is nyow a hapi shonk :3
       links:
-        - "Install Mowe kewl apps":
+        - "Install Mowe kewl apps (Open Discover)":
             run: /usr/bin/plasma-discover
         - "Check out uBlahaj wepositowy":
             run: /usr/bin/xdg-open https://github.com/Sharkitty/uBlahaj
