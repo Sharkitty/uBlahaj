@@ -5,7 +5,6 @@ It currently only includes the `kinoite` variant.
 Both `main` and `nvidia` versions are available.
 
 **This is a work in progress. I currently don't recommand using this image for production.**
-**Expect image naming changes soon. You will need to rebase when this happens.**
 
 ## Features
 Some packages are added or removed from the base image:
