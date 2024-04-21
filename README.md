@@ -1,9 +1,8 @@
 # uBlahaj &nbsp; [![build-ublue](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
 
-This is a custom fedora atomic image derived from `uBlue` main images.
+This is a custom fedora atomic image derived from `uBlue` base images.
 It currently only includes the `kinoite` variant.
-
-I will most likely add nvidia support later.
+Both `main` and `nvidia` versions are available.
 
 **This is a work in progress. I currently don't recommand using this image for production.**
 **Expect image naming changes soon. You will need to rebase when this happens.**
@@ -12,10 +11,10 @@ I will most likely add nvidia support later.
 Some packages are added or removed from the base image:
 - `zsh` installed out of the box, with `zsh-autosuggestions` and `zsh-syntax-highlighting` included.
 - `btop` instead of `htop`.
-- `wezterm` terminal emulator.
-- `foot` terminal emulator as well (Planned for removal, along with `tmux`, once a sufficient config is available for `wezterm` in `sharkonfig`).
+- `wezterm` terminal emulator (Note: it may have issues with Nvidia. If you use an Optimus laptop and render it from the iGPU, you'll be unaffected. Otherwise, try and if it freezes, I recommand layering a terminal emulator of your choosing).
 - `firefox` is removed, so it can be replaced with the flatpak version.
 - `toolbox` is removed, in favor of `distrobox`.
+- `tmux` is removed, as `ezterm` has a built in multiplexer.
 
 `yafti` is used for post installation configs, mainly for flatpak and user configs:
 - Installing flathub.
@@ -34,16 +33,31 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/sharkitty/ublahaj:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/sharkitty/ublahaj-kinoite-40-main:latest
   ```
+
+  or
+
+  ```
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/sharkitty/ublahaj-kinoite-40-nvidia:latest
+  ```
+
 - Reboot to complete the rebase:
   ```
   systemctl reboot
   ```
+
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/sharkitty/ublahaj:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/sharkitty/ublahaj-kinoite-40-main:latest
   ```
+
+ or
+
+  ```
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/sharkitty/ublahaj-kinoite-40-nvidia:latest
+  ```
+
 - Reboot again to complete the installation
   ```
   systemctl reboot
