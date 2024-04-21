@@ -52,7 +52,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/sharkitty/ublahaj-kinoite-40-main:latest
   ```
 
- or
+  or
 
   ```
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/sharkitty/ublahaj-kinoite-40-nvidia:latest
