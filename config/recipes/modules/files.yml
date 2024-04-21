@@ -1,10 +1,10 @@
-- type: files
+type: files
   files:
     - usr: /usr # copies config/files/usr into your image's /usr.
                 # put configuration files you want in /etc/ on a booted system 
                 # in /usr/etc/ in the image. read more in files module reference.
 
-- type: rpm-ostree
+type: rpm-ostree
   repos:
     - https://copr.fedorainfracloud.org/coprs/stefan-maassen/wezterm/repo/fedora-39/stefan-maassen-wezterm-fedora-%OS_VERSION%.repo
   install:
@@ -21,9 +21,9 @@
     - tmux
     - toolbox
 
-- type: yafti
+type: yafti
 
-- type: fonts
+type: fonts
   fonts:
     nerd-fonts:
       - Agave
