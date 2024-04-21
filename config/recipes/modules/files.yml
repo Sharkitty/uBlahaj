@@ -1,29 +1,5 @@
 type: files
-  files:
-    - usr: /usr # copies config/files/usr into your image's /usr.
-                # put configuration files you want in /etc/ on a booted system 
-                # in /usr/etc/ in the image. read more in files module reference.
-
-type: rpm-ostree
-  repos:
-    - https://copr.fedorainfracloud.org/coprs/stefan-maassen/wezterm/repo/fedora-39/stefan-maassen-wezterm-fedora-%OS_VERSION%.repo
-  install:
-    - btop
-    - foot
-    - wezterm
-    - zsh
-    - zsh-autosuggestions
-    - zsh-syntax-highlighting
-  remove:
-    - firefox
-    - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-    - htop
-    - tmux
-    - toolbox
-
-type: yafti
-
-type: fonts
-  fonts:
-    nerd-fonts:
-      - Agave
+files:
+  - usr: /usr # copies config/files/usr into your image's /usr.
+              # put configuration files you want in /etc/ on a booted system 
+              # in /usr/etc/ in the image. read more in files module reference.
