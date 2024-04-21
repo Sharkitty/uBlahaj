@@ -12,6 +12,7 @@ remove:
   - firefox
   - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
   - htop
+  - konsole
   - krfb
   - krfb-libs
   - kwrite
