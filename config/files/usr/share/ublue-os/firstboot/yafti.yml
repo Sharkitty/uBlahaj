@@ -23,7 +23,7 @@ screens:
       description: |
         Fedora flatpak wemote was found :c Do you want to weplace it with flathub? This is wequiwed fow yafti to nyanstall flatpaks, and this will also wemove all installed flatpaks.
       actions:
-        - run: flatpak remove --noninteractive --all  && flatpak remote-delete --system fedora && flatpak remote-delete --user fedora && flatpak remote-add --if-not-exists --system flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+        - run: flatpak remove --noninteractive --all && flatpak remote-delete --system fedora && flatpak remote-delete --user fedora && flatpak remote-add --if-not-exists --system flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
   check-system-flathub:
     source: yafti.screen.consent
