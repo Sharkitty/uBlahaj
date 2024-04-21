@@ -14,6 +14,17 @@ screens:
       description: |
         I'm gonnya halp chu set up youw system UwU
 
+  check-no-fedora-flatpak:
+    source: yafti.screen.consent
+    values:
+      title: Wemoving fedora flatpaks?
+      condition:
+        run: flatpak remotes --columns=name | grep fedora
+      description: |
+        Fedora flatpak wemote was found :c Do you want to weplace it with flathub? This is wequiwed fow yafti to nyanstall flatpaks, and this will also wemove all installed flatpaks.
+      actions:
+        - run: flatpak remove --noninteractive --all  && flatpak remote-delete --system fedora && flatpak remote-delete --user fedora && flatpak remote-add --if-not-exists --system flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
   check-system-flathub:
     source: yafti.screen.consent
     values:
@@ -21,7 +32,7 @@ screens:
       condition:
         run: flatpak remotes --system --columns=name | grep flathub | wc -l | grep '^0$'
       description: |
-        Flathub wemote is nyot installed :c Do you want to nyanstall it? :3
+        Flathub wemote is nyot installed :c Do you want to nyanstall it? :3 This wequiwed fow yafti to nyanstall flatpaks
       actions:
         - run: flatpak remote-add --if-not-exists --system flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 

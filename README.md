@@ -16,7 +16,7 @@ Some packages are added or removed from the base image:
 - `tmux` is removed, as `ezterm` has a built in multiplexer.
 
 `yafti` is used for post installation configs, mainly for flatpak and user configs:
-- Installing flathub.
+- Replacing fedora flatpak remote with flathub.
 - Install recommended flatpaks (You can choose what you want or don't want to install).
 - Installing `ohmyzsh` (Note: `yafti` won't set your default shell, you can use `ujust chsh` or simply `chsh` for that).
 - Copying user configs from [sharkonfig](https://github.com/Sharkitty/sharkonfig).
