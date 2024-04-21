@@ -50,6 +50,8 @@ screens:
           description: KDE Apps for KDE fans UwU
           default: true
           packages:
+            - KCalc: org.kde.kcalc
+            - Krita: org.kde.krita
             - Gwenview: org.kde.gwenview
             - Okular: org.kde.okular
         Intewnet:
@@ -59,6 +61,7 @@ screens:
             - Librewolf: io.gitlab.librewolf-community
             - Firefox: org.mozilla.firefox
             - Fluffychat: im.fluffychat.Fluffychat
+            - NewsFlash: io.gitlab.news_flash.NewsFlash
             - Thunderbird: org.mozilla.Thunderbird
         Multimedia and Office:
           description: Things to watch animes :3 But also bowing office stuff TwT
