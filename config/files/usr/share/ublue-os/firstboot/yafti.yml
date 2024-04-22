@@ -76,7 +76,6 @@ screens:
             - Heroic Games Launcher: com.heroicgameslauncher.hgl
             - Steam: com.valvesoftware.Steam
             - The cwtically acclaimed MMOWPG Final Fantasy XIV (XIVLauncher): dev.goats.xivlauncher
-            - MangoHud: org.freedesktop.Platform.VulkanLayer.MangoHud
         Tools:
           description: The best categowy UwU
           default: true
