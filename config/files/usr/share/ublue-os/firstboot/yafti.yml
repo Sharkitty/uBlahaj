@@ -2,7 +2,7 @@ title: Welcome to uBlahaj :3
 
 
 properties:
-  mode: "run-on-change"
+  mode: "run-once"
   path: "~/.config/yafti/last-run"
 
 
@@ -101,6 +101,9 @@ screens:
     source: yafti.screen.consent
     values:
       title: sharkonfig nyanstallation
+      condition:
+        run: |
+          [ -d "$HOME/.config/nvim/lua/shork" ] || echo "sharkonfig is not installed"
       description: |
         Do you want to nyanstall sharkonfig user configs? These are a collection of dotfiles made for uBlahaj.
       actions:
