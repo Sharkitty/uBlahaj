@@ -55,6 +55,4 @@ jobs:
           path: |
             ${{ steps.build.outputs.iso_path }}
             ${{ steps.build.outputs.iso_path }}-CHECKSUM
-        if-no-files-found: error
-        retention-days: 0
         compression-level: 0
