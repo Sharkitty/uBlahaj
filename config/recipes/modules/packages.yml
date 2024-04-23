@@ -1,6 +1,6 @@
 type: rpm-ostree
 repos:
-  - https://copr.fedorainfracloud.org/coprs/stefan-maassen/wezterm/repo/fedora-39/stefan-maassen-wezterm-fedora-%OS_VERSION%.repo
+  - https://copr.fedorainfracloud.org/coprs/stefan-maassen/wezterm/repo/fedora-%OS_VERSION%/stefan-maassen-wezterm-fedora-%OS_VERSION%.repo
 install:
   - btop
   - foot
