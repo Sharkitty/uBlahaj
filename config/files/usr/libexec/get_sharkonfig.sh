@@ -39,6 +39,11 @@ then
     fi
 fi
 
+echo "Cloning sharkonfig repository into $HOME/sharkonfig"
 git clone https://github.com/Sharkitty/sharkonfig.git -b re_clone_external_repos $HOME/sharkonfig
+
+echo "Executing sharkonfig copy script"
 $HOME/sharkonfig/scripts/copy.sh
+
+echo "Deleting sharkonfig directory"
 rm -rf $HOME/sharkonfig
