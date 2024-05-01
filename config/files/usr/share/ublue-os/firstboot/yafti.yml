@@ -106,7 +106,7 @@ screens:
       description: |
         Do you want to nyanstall sharkonfig user configs? These are a collection of dotfiles made for uBlahaj.
       actions:
-        - run: git clone --recurse-submodules https://github.com/Sharkitty/sharkonfig.git $HOME/sharkonfig && python3 $HOME/sharkonfig/scripts/copy.py && rm -rf $HOME/sharkonfig
+        - run: /usr/libexec/get_sharkonfig.sh -n
 
   final-screen:
     source: yafti.screen.title
