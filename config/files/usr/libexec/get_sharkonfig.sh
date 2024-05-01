@@ -27,7 +27,7 @@ do
     esac
 done
 
-if [ "$insteractive" = true ]
+if [ "$interactive" = true ]
 then
     echo "Do you want to get sharkonfigs? Please make sure your configs are backed up before doing this. (y/n)"
     read proceed
