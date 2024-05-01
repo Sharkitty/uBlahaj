@@ -40,7 +40,7 @@ then
 fi
 
 echo "Cloning sharkonfig repository into $HOME/sharkonfig"
-git clone https://github.com/Sharkitty/sharkonfig.git -b re_clone_external_repos $HOME/sharkonfig
+git clone https://github.com/Sharkitty/sharkonfig.git $HOME/sharkonfig
 
 echo "Executing sharkonfig copy script"
 $HOME/sharkonfig/scripts/copy.sh
