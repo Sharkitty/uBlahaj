@@ -34,8 +34,8 @@ then
 
     if ! [[ "$proceed" =~ ^([yY][eE][sS]|[yY])$ ]]
     then
-        echo "Oki bye bye! UwU"
-        exit 1
+        echo "Oki bye bye! :3"
+        exit
     fi
 fi
 
