@@ -4,7 +4,7 @@ repos:
   - https://download.opensuse.org/repositories/home:/Sharkopter/Fedora_40/home:Sharkopter.repo
 install:
   - btop
-  - oversteer
+  - oversteer.noarch
   - wezterm
   - zsh
 remove:
