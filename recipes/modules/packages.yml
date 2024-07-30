@@ -4,7 +4,7 @@ repos:
   - https://download.opensuse.org/repositories/home:/Sharkopter/Fedora_40/home:Sharkopter.repo
 install:
   - btop
-  - oversteer.noarch
+  - oversteer
   - wezterm
   - zsh
 remove:
@@ -14,5 +14,6 @@ remove:
   - krfb
   - krfb-libs
   - kwrite
+  - oversteer-udev # conflicts with oversteer
   - tmux
   - toolbox
