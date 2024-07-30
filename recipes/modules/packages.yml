@@ -1,7 +1,7 @@
 type: rpm-ostree
 repos:
   - https://copr.fedorainfracloud.org/coprs/stefan-maassen/wezterm/repo/fedora-%OS_VERSION%/stefan-maassen-wezterm-fedora-%OS_VERSION%.repo
-  - https://download.opensuse.org/repositories/home:/Sharkopter/Fedora_%OS_VERSION%/home:Sharkopter.repo
+  - https://download.opensuse.org/repositories/home:/Sharkopter/Fedora_40/home:Sharkopter.repo
 install:
   - btop
   - oversteer
