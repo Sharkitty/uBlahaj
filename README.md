@@ -11,6 +11,7 @@ Some packages are added or removed from the base image:
 - `zsh` installed out of the box, with `zsh-autosuggestions` and `zsh-syntax-highlighting` included.
 - `btop` instead of `htop`.
 - `foot` terminal emulator.
+- `hyfetch`, better `neofetch` with pride flags.
 - `firefox` is removed, so it can be replaced with the flatpak version.
 - `toolbox` is removed, in favor of `distrobox`.
 - `tmux` is removed, and replaced by `zellij`.
