@@ -4,6 +4,7 @@ repos:
   - https://download.opensuse.org/repositories/home:/Sharkopter/Fedora_40/home:Sharkopter.repo
 install:
   - btop
+  - hyfetch
   - oversteer
   - wezterm
   - zsh
