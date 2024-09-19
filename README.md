@@ -11,10 +11,10 @@ Some packages are added or removed from the base image:
 - `zsh` installed out of the box, with `zsh-autosuggestions` and `zsh-syntax-highlighting` included.
 - `btop` instead of `htop`.
 - `oversteer` installed out of the box. It's force feedback steering wheel configurator (Mainly works for Logitech steering wheels, it has limited compatibility with some Thrustmaster steering wheels).
-- `wezterm` terminal emulator (Note: it may have issues with Nvidia. If you use an Optimus laptop and render it from the iGPU, you'll be unaffected. Otherwise, try and if it freezes, I recommand layering a terminal emulator of your choosing).
+- `foot` terminal emulator.
 - `firefox` is removed, so it can be replaced with the flatpak version.
 - `toolbox` is removed, in favor of `distrobox`.
-- `tmux` is removed, as `ezterm` has a built in multiplexer.
+- `tmux` is removed, and replaced by `zellij`.
 
 `yafti` is used for post installation configs, mainly for flatpak and user configs:
 - Replacing fedora flatpak remote with flathub.
