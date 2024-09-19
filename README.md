@@ -10,7 +10,6 @@ Both `main` and `nvidia` versions are available.
 Some packages are added or removed from the base image:
 - `zsh` installed out of the box, with `zsh-autosuggestions` and `zsh-syntax-highlighting` included.
 - `btop` instead of `htop`.
-- `oversteer` installed out of the box. It's force feedback steering wheel configurator (Mainly works for Logitech steering wheels, it has limited compatibility with some Thrustmaster steering wheels).
 - `foot` terminal emulator.
 - `firefox` is removed, so it can be replaced with the flatpak version.
 - `toolbox` is removed, in favor of `distrobox`.

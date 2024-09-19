@@ -1,11 +1,9 @@
 type: rpm-ostree
 repos:
   - https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-%OS_VERSION%/varlad-zellij-fedora-%OS_VERSION%.repo
-  - https://download.opensuse.org/repositories/home:/Sharkopter/Fedora_40/home:Sharkopter.repo
 install:
   - btop
   - foot
-  - oversteer
   - zellij
   - zsh
 remove:
@@ -15,6 +13,5 @@ remove:
   - krfb
   - krfb-libs
   - kwrite
-  - oversteer-udev # conflicts with oversteer
   - tmux
   - toolbox

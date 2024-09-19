@@ -76,6 +76,7 @@ screens:
             - Heroic Games Launcher: com.heroicgameslauncher.hgl
             - Steam: com.valvesoftware.Steam
             - The cwtically acclaimed MMOWPG Final Fantasy XIV (XIVLauncher): dev.goats.xivlauncher
+            - Oversteer (utility for forced feedback steering wheels): io.github.berarma.Oversteer
         Tools:
           description: The best categowy UwU
           default: true
