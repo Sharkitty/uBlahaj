@@ -4,6 +4,7 @@ repos:
 install:
   - btop
   - foot
+  - hyfetch
   - zellij
   - zsh
 remove:
