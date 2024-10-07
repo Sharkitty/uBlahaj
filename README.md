@@ -33,7 +33,19 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/sharkitty/ublahaj-kinoite-41-main:latest
+  ```
+
+  or
+
+  ```
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/sharkitty/ublahaj-kinoite-40-main:latest
+  ```
+
+  or
+
+  ```
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/sharkitty/ublahaj-kinoite-41-nvidia:latest
   ```
 
   or
@@ -49,7 +61,19 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - Then rebase to the signed image, like so:
   ```
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/sharkitty/ublahaj-kinoite-41-main:latest
+  ```
+
+  or
+
+  ```
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/sharkitty/ublahaj-kinoite-40-main:latest
+  ```
+
+  or
+
+  ```
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/sharkitty/ublahaj-kinoite-41-nvidia:latest
   ```
 
   or
