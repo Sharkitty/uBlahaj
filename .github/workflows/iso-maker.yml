@@ -1,0 +1,42 @@
+name: ISO Maker
+on:
+  schedule:
+    - cron: "15 07 3 * *"
+  workflow_dispatch:
+jobs:
+  iso-maker:
+    name: ISO Maker
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        image_variant:
+          - kinoite-40-main
+          - kinoite-40-nvidia
+    steps:
+    - name: Build ISO
+      uses: jasonn3/build-container-installer@main
+      id: build
+      with:
+        arch: ${{ env.ARCH}}
+        image_name: ${{ env.IMAGE_NAME}}
+        image_repo: ${{ env.IMAGE_REPO}}
+        image_tag: ${{ env.IMAGE_TAG }}
+        version: ${{ env.VERSION }}
+        variant: ${{ matrix.image_variant }}
+        iso_name: ${{ env.IMAGE_NAME }}-${{ matrix.image_variant }}-${{ env.IMAGE_TAG }}.iso
+
+    # This example is for uploading your ISO as a Github artifact. You can do something similar using any cloud storage, so long as you copy the output
+    - name: Upload ISO as artifact
+      id: upload
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ steps.build.outputs.iso_name }}
+        path: |
+          ${{ steps.build.outputs.iso_path }}
+          ${{ steps.build.outputs.iso_path }}-CHECKSUM
+        if-no-files-found: error
+        retention-days: 0
+        compression-level: 0
