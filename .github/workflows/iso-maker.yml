@@ -1,8 +1,11 @@
 name: ISO Maker
 on:
   schedule:
-    - cron: "15 07 3 * *"
+  - cron: "15 07 3 * *"
   workflow_dispatch:
+  push:
+    branches:
+    - 'ft_build_container_installer'
 jobs:
   iso-maker:
     name: ISO Maker
