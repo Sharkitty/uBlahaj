@@ -18,21 +18,25 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_variant:
-          - kinoite-40-main
-          - kinoite-40-nvidia
+        base:
+          - kinoite
+        version:
+          - 40
+        variant:
+          - main
+          - nvidia
     steps:
     - name: Build ISO
       uses: jasonn3/build-container-installer@main
       id: build
       with:
         arch: x86_64
-        image_name: ${{ env.image_name }}
+        image_name: ${{ env.image_name }}-${{ matrix.base }}-${{ matrix.version }}-${{ matrix.variant }}
         image_repo: ${{ github.repository }}
         image_tag: ${{ env.image_tag }}
         version: 40
-        variant: ${{ matrix.image_variant }}
-        iso_name: ${{ env.image_name }}-${{ matrix.image_variant }}-${{ env.image_tag }}.iso
+        variant: ${{ matrix.base }}-${{ matrix.version }}-${{ matrix.variant }}
+        iso_name: ${{ steps.build.with.image_name }}-${{ matrix.variant }}-${{ env.image_tag }}.iso
 
     # This example is for uploading your ISO as a Github artifact. You can do something similar using any cloud storage, so long as you copy the output
     - name: Upload ISO as artifact
