@@ -40,7 +40,7 @@ jobs:
         image_tag: ${{ env.image_tag }}
         version: 40
         variant: ${{ matrix.base }}-${{ matrix.version }}-${{ matrix.variant }}
-        iso_name: ${{ steps.build.with.image_name }}-${{ matrix.variant }}-${{ env.image_tag }}.iso
+        iso_name: ${{ env.image_name }}-${{ matrix.base }}-${{ matrix.version }}-${{ matrix.variant }}-${{ env.image_tag }}.iso
 
     # This example is for uploading your ISO as a Github artifact. You can do something similar using any cloud storage, so long as you copy the output
     - name: Upload ISO as artifact
