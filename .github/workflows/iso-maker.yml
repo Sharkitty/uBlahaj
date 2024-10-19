@@ -28,7 +28,7 @@ jobs:
     steps:
     - name: Lowercase repository owner
       id: lower-repo-owner
-      run: echo "REPO_OWNER_LC=${GITHUB_REPOSITORY_OWNER,,} >> $GITHUB_ENV"
+      run: echo "REPO_OWNER_LC=${GITHUB_REPOSITORY_OWNER@L}" >> "${GITHUB_ENV}"
 
     - name: Build ISO
       uses: jasonn3/build-container-installer@main
