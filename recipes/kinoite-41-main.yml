@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ublahaj-kinoite-40-main
+name: ublahaj-kinoite-41-main
 # description will be included in the image's metadata
-description: uBlahaj 40 Kinoite - main version.
+description: uBlahaj 41 Kinoite - main version.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
