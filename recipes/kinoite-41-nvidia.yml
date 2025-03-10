@@ -13,5 +13,5 @@ modules:
   - from-file: modules/files.yml
   - from-file: modules/packages.yml
   - from-file: modules/fonts.yml
-  - type: yafti
+  # - type: yafti # disabled to fix a bug
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
