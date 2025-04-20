@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ublahaj-kinoite-40-nvidia
+name: ublahaj-kinoite-42-main
 # description will be included in the image's metadata
-description: uBlahaj 40 Kinoite - nvidia version.
+description: uBlahaj 42 Kinoite - main version.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/kinoite-nvidia
-image-version: 40 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/kinoite-main
+image-version: 42 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -13,5 +13,5 @@ modules:
   - from-file: modules/files.yml
   - from-file: modules/packages.yml
   - from-file: modules/fonts.yml
-  # - type: yafti # disabled to fix a bug
+  - type: yafti
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

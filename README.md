@@ -39,7 +39,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   or
 
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/sharkitty/ublahaj-kinoite-40-main:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/sharkitty/ublahaj-kinoite-42-main:latest
   ```
 
   or
@@ -51,7 +51,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   or
 
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/sharkitty/ublahaj-kinoite-40-nvidia:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/sharkitty/ublahaj-kinoite-42-nvidia:latest
   ```
 
 - Reboot to complete the rebase:
@@ -67,7 +67,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   or
 
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/sharkitty/ublahaj-kinoite-40-main:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/sharkitty/ublahaj-kinoite-42-main:latest
   ```
 
   or
@@ -79,7 +79,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   or
 
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/sharkitty/ublahaj-kinoite-40-nvidia:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/sharkitty/ublahaj-kinoite-42-nvidia:latest
   ```
 
 - Reboot again to complete the installation

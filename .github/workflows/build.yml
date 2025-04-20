@@ -27,10 +27,10 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - kinoite-40-main.yml
-          - kinoite-40-nvidia.yml
           - kinoite-41-main.yml
           - kinoite-41-nvidia.yml
+          - kinoite-42-main.yml
+          - kinoite-42-nvidia.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
